@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  let imageView = UIImageView()
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    imageView.frame = view.bounds
+    imageView.image = UIImage(named: "广场")
+    imageView.contentMode = .scaleAspectFit
+    view.addSubview(imageView)
+    
+    
+    let v = MyView(frame: view.bounds)
+    view.addSubview(v)
   }
 
   override func didReceiveMemoryWarning() {
